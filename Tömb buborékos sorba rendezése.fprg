@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value="bubor&#233;kos"/>
+        <attribute name="authors" value="hollik.evelin"/>
+        <attribute name="about" value="T&#246;mb bubor&#233;kos sorba rendez&#233;se"/>
+        <attribute name="saved" value="2024-01-09 10:07:46 de."/>
+        <attribute name="created" value="aG9sbGlrLmV2ZWxpbjtCVVJHLTFFMDUtMTQ7MjAyNC0wMS0wOTswODo1MDoyMiBkZS47MzQxNQ=="/>
+        <attribute name="edited" value="aG9sbGlrLmV2ZWxpbjtCVVJHLTFFMDUtMTQ7MjAyNC0wMS0wOTsxMDowNzo0NiBkZS47NDszNTI3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;K&#233;rem az elemek sz&#225;m&#225;t&quot;" newline="True"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="T" type="Integer" array="True" size="n"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="&quot;K&#233;rem a &amp;i+1&amp; elemet&quot;" newline="True"/>
+                <input variable="T[i]"/>
+            </for>
+            <output expression="&quot;Rendezetlen adatok: &quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="T[i]&amp;&quot;, &quot;" newline="False"/>
+            </for>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <for variable="k" start="0" end="n-2" direction="inc" step="1">
+                <for variable="i" start="0" end="n-2-k" direction="inc" step="1">
+                    <if expression="T[i]&gt;T[i+1]">
+                        <then>
+                            <declare name="tmp" type="Integer" array="False" size=""/>
+                            <assign variable="tmp" expression="T[i]"/>
+                            <assign variable="T[i]" expression="T[i+1]"/>
+                            <assign variable="T[i+1]" expression="tmp"/>
+                        </then>
+                        <else/>
+                    </if>
+                </for>
+            </for>
+            <output expression="&quot;Rendezett adatok&quot;" newline="True"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <output expression="T[i]&amp;&quot;, &quot;" newline="False"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>

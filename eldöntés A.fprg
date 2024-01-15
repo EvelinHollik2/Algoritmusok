@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hollik.evelin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-03 10:47:46 de."/>
+        <attribute name="created" value="aG9sbGlrLmV2ZWxpbjtCVVJHLTFFMDUtMTQ7MjAyNC0wMS0wMzswOTo0MTo0NSBkZS47MzQxNQ=="/>
+        <attribute name="edited" value="aG9sbGlrLmV2ZWxpbjtCVVJHLTFFMDUtMTQ7MjAyNC0wMS0wMzsxMDo0Nzo0NiBkZS47MTszNTIy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Eld&#246;nt&#233;s &quot;A&quot;&#13;&#10;Eld&#246;nt&#233;s az &#246;sszes elem vizsg&#225;lat&#225;val"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="tomb" type="Integer" array="True" size="n"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="tomb[i]"/>
+            </for>
+            <declare name="szam" type="Integer" array="False" size=""/>
+            <input variable="szam"/>
+            <declare name="k" type="Integer" array="False" size=""/>
+            <assign variable="k" expression="0"/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <if expression="tomb[i]=szam">
+                    <then>
+                        <assign variable="k" expression="k+1"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="k =0">
+                <then>
+                    <output expression="&quot;Nincs benne&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;Benne van&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

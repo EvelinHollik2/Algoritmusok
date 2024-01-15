@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="3.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="hollik.evelin"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-03 09:40:40 de."/>
+        <attribute name="created" value="aG9sbGlrLmV2ZWxpbjtCVVJHLTFFMDUtMTQ7MjAyNC0wMS0wMzswOToyMzoxMSBkZS47MzQwOA=="/>
+        <attribute name="edited" value="aG9sbGlrLmV2ZWxpbjtCVVJHLTFFMDUtMTQ7MjAyNC0wMS0wMzswOTo0MDo0MCBkZS47MTszNTE3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Kiv&#225;laszt&#225;s&#13;&#10;Az adott elem a t&#246;mb h&#225;nyadik hely&#233;n van. (Tudjuk, hogy tartalmazza!)&#13;&#10;"/>
+            <declare name="n" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <declare name="tomb" type="Integer" array="True" size="n"/>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <for variable="i" start="0" end="n-1" direction="inc" step="1">
+                <input variable="tomb[i]"/>
+            </for>
+        </body>
+    </function>
+</flowgorithm>
